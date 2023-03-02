@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import requests
+import pixela
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+my_pixela = pixela.Pixela()
+# Run if this is the first time running it or don't have Pixela account.
+my_pixela.create_user_account()
 
+# # create graph if you haven't already
+my_pixela.create_graph()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# Post to graph
+my_pixela.post_to_graph()
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+my_pixela.update_graph()
